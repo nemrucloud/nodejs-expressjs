@@ -15,7 +15,6 @@ jobs:
     permissions:
       packages: write
       contents: read
-      #
     steps:
       - uses: actions/checkout@v4
 
@@ -30,6 +29,5 @@ jobs:
           IMAGE_ID=ghcr.io/${{ github.repository_owner }}/$IMAGE_NAME
           IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
           echo IMAGE_ID=$IMAGE_ID
-          echo VERSION=gallium-alpine
-          docker tag $IMAGE_NAME $IMAGE_ID:$VERSION
-          docker push $IMAGE_ID:$VERSION
+          docker tag $IMAGE_NAME $IMAGE_ID:gallium-alpine
+          docker push $IMAGE_ID:gallium-alpine
