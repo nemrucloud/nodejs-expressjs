@@ -4,6 +4,7 @@ FROM node:alpine
 LABEL org.opencontainers.image.source https://github.com/nemrucloud/nodejs-expressjs
 
 WORKDIR /app
+COPY . /app
 
 RUN npm install -g nodemon
 
