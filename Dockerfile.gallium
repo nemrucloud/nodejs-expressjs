@@ -5,7 +5,6 @@ LABEL org.opencontainers.image.source https://github.com/nemrucloud/nodejs-expre
 
 WORKDIR /app
 
-RUN npm install -g npm
 RUN npm install -g nodemon
 
 COPY entrypoint /usr/local/bin/entrypoint
