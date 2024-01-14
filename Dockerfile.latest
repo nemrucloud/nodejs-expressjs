@@ -12,3 +12,5 @@ COPY entrypoint /usr/local/bin/entrypoint
 RUN chmod +x /usr/local/bin/entrypoint
 
 ENTRYPOINT [ "/usr/bin/entrypoint" ]
+
+CMD [ "sh", "-c", "nodemon" ]
